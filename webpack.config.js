@@ -14,6 +14,9 @@ module.exports = {
     // compress: true,
     publicPath: '/build',
     port: 8080,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
   module: {
     rules: [
