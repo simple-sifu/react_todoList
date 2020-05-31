@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production node server/server.js",
-    "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development  node server/server.js & webpack-dev-server --open",
+    "start": "set \"NODE_ENV=production\" && node server/server.js",
+    "build": "set \"NODE_ENV=production\" && \"webpack\"",
+    "dev": "set \"NODE_ENV=development\" && concurrently  \"node server/server.js\" \"webpack-dev-server --open\"",
     "gulp-prod": "node_modules/.bin/gulp prod",
     "gulp-dev": "node_modules/.bin/gulp dev"
   },

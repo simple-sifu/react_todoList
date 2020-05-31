@@ -4,7 +4,7 @@ const path = require('path');
 // ｢wds｣: Content not from webpack is served from
 //Users/tommy/projects/javascript/build-tools-module/build
 module.exports = {
-  entry: './client/index.js',
+  entry: './client/App.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
