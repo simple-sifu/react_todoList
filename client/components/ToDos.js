@@ -6,7 +6,7 @@ class ToDos extends Component {
 
   render(){
     const listItems = this.props.todos
-    const listToDos = listItems.map((item) => <li key={item.slice(0,3)}>{item}</li>
+    const listToDos = listItems.map((item, idx) => <li key={idx}>{item}</li>
     )
 
     return (   

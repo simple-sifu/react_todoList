@@ -13,20 +13,39 @@ class MainContainer extends Component {
         "Rice",
         "Birthday Cake",
         "Candles"
-      ]
+      ],
+      todoItem: ''
     }
-
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
+
+  handleChange(e){
+    this.setState({todoItem: e.target.value})
+    
+    console.log('handleChange - ', e.target.value)
+  }
+
+  handleSubmit () {
+    const updatedTodo = [...this.state.todos, this.state.todoItem];
+    this.setState({todos: updatedTodo});
+  }
+
 
   render(){
     return (
       <div>
         <Header />
-          <ToDos todos={this.state.todos}/>
+    
+        <input type="text" placeholder="enter item" onChange={this.handleChange}/>
+        <button onClick={this.handleSubmit}>Enter</button>
+
+        <ToDos todos={this.state.todos}/>
       </div>
     );
 
   }
 }
+
 
 export default MainContainer;
