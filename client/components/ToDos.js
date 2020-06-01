@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import ToDoItem from './ToDoItem.jsx';
-import PropTypes from 'prop-types';
+// import ToDoItem from './ToDoItem.jsx';
+
 
 class ToDos extends Component {
 
-  
   render(){
-    return (
-      this.props.todos.map((todo) => (
-        <p> <ToDoItem key={todo.id} todos={todo}/></p>
-      ))
+    const listItems = this.props.todos
+    const listToDos = listItems.map((item) => <li key={item.slice(0,3)}>{item}</li>
+    )
 
+    return (   
+     <ul>{listToDos} </ul>
     )
   }
-
-}
-
-ToDos.propTypes = {
-  // the todo is the prop that is the key being accessed and also the props being passed down 
-  // list the key, what type of data it is, and whether it is required or not
-  todos: PropTypes.array.isRequired
 }
 
 export default ToDos;

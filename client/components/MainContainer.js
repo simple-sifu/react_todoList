@@ -1,29 +1,28 @@
 import React, { Component } from 'react';
-// import ToDos from './ToDos'
+import ToDos from './ToDos'
 import Header from './Header'
 
 class MainContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      todos: [
+        "Notebook",
+        "Jello",
+        "Spinach",
+        "Rice",
+        "Birthday Cake",
+        "Candles"
+      ]
+    }
 
-  // state = {
-  //   todos: [
-  //     {
-  //       id: 1,
-  //       title: "Take out the trash",
-  //       completed: false
-  //     },
-  //     {
-  //       id: 2,
-  //       title: "no trash for me",
-  //       completed: true
-  //     }
-  //   ]
-  // }
+  }
 
   render(){
     return (
       <div>
         <Header />
-        {/* <ToDos todos={this.state.todos}/> */}
+          <ToDos todos={this.state.todos}/>
       </div>
     );
 
