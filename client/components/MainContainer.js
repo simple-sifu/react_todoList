@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ToDos from './ToDos'
 import Header from './Header'
+import Manager from './Manager'
 
 class MainContainer extends Component {
   constructor(props){
@@ -36,11 +36,10 @@ class MainContainer extends Component {
     return (
       <div>
         <Header />
-    
-        <input type="text" placeholder="enter item" onChange={this.handleChange}/>
-        <button onClick={this.handleSubmit}>Enter</button>
-
-        <ToDos todos={this.state.todos}/>
+        <Manager todos={this.state.todos} 
+                 handleChange={this.handleChange} 
+                 handleSubmit={this.handleSubmit}
+        />  
       </div>
     );
 
