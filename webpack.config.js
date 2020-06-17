@@ -13,7 +13,7 @@ module.exports = {
     // contentBase: path.resolve(__dirname, 'build'),
     // compress: true,
     publicPath: '/build',
-    port: 8080,
+    port: 9090,
     proxy: {
       '/api': 'http://localhost:3000',
     },
