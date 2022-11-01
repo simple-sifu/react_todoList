@@ -17,10 +17,10 @@
   "author": "CodesmithLLC https://github.com/CodesmithLLC <hello@codesmith.io>",
   "license": "ISC",
   "dependencies": {
-    "browserify": "^10.2.4",
+    "browserify": "^17.0.0",
     "css-loader": "^3.5.3",
     "express": "^4.12.3",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "node-sass": "^4.14.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
